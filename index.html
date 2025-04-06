@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deep Human Generation with Disentangled Geometry and Appearance Constraints.">
+  <meta name="keywords" content="Sketch2Human, StyleGAN">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deep Human Generation with Disentangled Geometry and Appearance Constraints</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://github.com/linziqu/LinziQU.github.io">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Controllable Human Video Generation
+            from Sparse Sketches</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Linzi Qu</a><sup>1</sup>,</span>
+            <span class="author-block">Jiaxiang Shang</a><sup>2</sup>,</span>
+            <span class="author-block">Miu-Ling Lam</a><sup>1</sup>,
+            </span>
+            <span class="author-block">Hongbo Fu</a><sup>2</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup> City University of Hong Kong,</span>
+            <span class="author-block"><sup>2</sup> Hong Kong University of Science and Technology,</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://ieeexplore.ieee.org/abstract/document/10892030"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!--<span class="link-block">
+                <a href="https://arxiv.org/pdf/2404.15889v1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href="https://drive.google.com/file/d/1YSj1QsRMCdGcbuaqGtz7W9gSIn5TBqQw/view?usp=sharing"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-solid fa-file"></i>
+                  </span>
+                  <span>Supplemental Material</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/linziqu/Sketch2HumanVideo"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/teaser.jpg" referrerpolicy="no-referrer" alt="Teaser">
+      <h2 class="subtitle has-text-centered">
+        Our Sketch2Human generates high-quality full-body images with respect to an input semantic sketch 
+        for geometry control and a reference image for appearance control. (a), (b), (c), and (d) correspond to four different sketch inputs.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent advancements in human fashion video generation have transformed the field, producing various promising effects. 
+            Existing methods mainly focus on pose control but lack the
+            ability to achieve sketch-based control, largely due to the absence of appearance-consistent 
+            and shape-varying knowledge in existing datasets. Moreover, the necessity of sequential 
+            structure inputs to control video generation hinders real-world applications.
+            To address these limitations, we introduce Sketch2HumanVideo, an approach that, for the first time, achieves sketch-controllable
+            human video generation with three conditions: temporally sparse
+            sketches, a spatially sparse pose sequence, and a reference
+            appearance image. Our key contribution is a sparse sketch
+            encoder, which takes the first two conditions as input, enabling
+            precise and multi-view control of shape motion. To provide the
+            above knowledge, we leverage the expertise of two pretrained
+            models to synthesize a dataset comprising shape-varying yet
+            appearance-consistent examples for model training. Furthermore,
+            we introduce an enlarging-and-resampling scheme to enhance
+            high-frequency details of local regions in resource-constrained
+            scenarios, thereby promoting the generation of realistic videos.
+            Through qualitative and quantitative experiments, our method
+            showcases superior performance to state-of-the-art approaches
+            and flexible control.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!--/ Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <img src="./static/images/framework.jpg" referrerpolicy="no-referrer" alt="framework">
+        <div class="content has-text-justified">
+          <p>
+          An illustration about the three parts of our method: (Left) Given an individual video, we first fine-tune the SD and ControlNet with LoRA to customize
+          the appearance. Then, given arbitrary sketch inputs and prompts, the fine-tuned model generates the reference images for the subsequent training. (Middle)
+          Our Sketch2HumanVideo consists of three main modules. First, the sparse sketch encoder aims to restore complete shape motion from the pose sequence
+        \(\{P_{1:N}\}\) and sparse sketches \((S_1, S_N)\). Second, the appearance net learns the appearance features from a randomly selected reference image
+          \(\hat{I}_{ref}\) from our generated data. Third, the text-to-video backbone assembles the appearance and shape information separately from the above two modules to 
+        denoise the noisy input \(\{z_{1:N,0}\}\). (Right) At the inference time, we first generate a coarse full-body video \(\{\hat{I}^{\text{full}}_{1:N}\}\)
+          as a canvas and then enlarge specific regions (face/body)
+          with overlap followed by a resampling strategy. To keep the smooth stitching for those regions, we average the overlap features and then replace them with
+          the averaged one.
+        </p>
+      </div>
+      </h2>
+      </div>
+    </div>
+    <!--/ Method. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <video id="sketch2humanvideo" autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/sketch2humanvideo.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+
+<!--/ More results. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Examples of the Synthetic Reference Data</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="content">
+        <img src="./static/images/synthesized_ref.jpg" referrerpolicy="no-referrer" alt="data">
+        <p>For each appearance in the existing human video dataset, we provide several synthesized reference images that showcase variations in shape, including hairstyles, body shapes, and clothing types.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{qu2025controllable,
+      title={Controllable Human Video Generation from Sparse Sketches},
+      author={Qu, Linzi and Shang, Jiaxiang and Lam, Miu-Ling and Fu, Hongbo},
+      journal={IEEE Transactions on Visualization and Computer Graphics},
+      year={2025},
+      publisher={IEEE}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website source code based on the Nerfies project page. 
+            If you want to reuse their <a href="https://github.com/nerfies/nerfies.github.io">source code</a>, please credit them appropriately.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
