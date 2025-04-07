@@ -1,6 +1,6 @@
 # Controllable Human Video Generation from Sparse Sketches
 
-This is the repository that contains source code for the [sketch2humanvideo website](https://sketch2humanvideo.github.io).
+This is the repository that contains source code for the [sketch2humanvideo website](https://linziqu.github.io/sketch2humanvideo.github.io).
 
 If you find Sketch2HumanVideo useful for your work please cite:
 ```
